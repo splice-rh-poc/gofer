@@ -11,6 +11,10 @@ export SYSTEMCTL_IGNORE_DEPENDENCIES=1
 
 . /etc/init.d/functions
 
+# Set umask so that files gofer creates are root owned and world readable.
+# See https://bugzilla.redhat.com/show_bug.cgi?id=892394
+umask 022
+
 BINDIR=/usr/bin
 PROG=goferd
 LOCK=/var/lock/subsys/$PROG
