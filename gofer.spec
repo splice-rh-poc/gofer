@@ -2,7 +2,7 @@
 %{!?ruby_sitelib: %global ruby_sitelib %(ruby -rrbconfig  -e 'puts Config::CONFIG["sitelibdir"]')}
 
 Name: gofer
-Version: 0.64.rhui
+Version: 0.65.rhui
 Release: 1%{?dist}
 Summary: A lightweight, extensible python agent
 Group:   Development/Languages
@@ -240,6 +240,10 @@ This plug-in provides RMI access to package (RPM) management.
 
 
 %changelog
+* Wed Jan 30 2013 James Slagle <jslagle@redhat.com> 0.65.rhui-1
+- Add .rhui to version field (jslagle@redhat.com)
+- 892394 - set explicit umask (jslagle@redhat.com)
+
 * Mon Jan 09 2012 Jeff Ortel <jortel@redhat.com> 0.64-1
 - Enhanced package (plugin) API. (jortel@redhat.com)
 * Wed Nov 30 2011 Jeff Ortel <jortel@redhat.com> 0.63-1
